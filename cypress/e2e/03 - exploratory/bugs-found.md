@@ -1,90 +1,90 @@
-# Bugs Found
+# Bugs Encontrados
 
 ---
 
-## BUG 1 - Forgot password flow is not working
+## BUG 1 - Fluxo de recuperação de senha não funciona
 
-### Severity
-Medium
+### Severidade
+Média
 
-### Priority
-Medium
+### Prioridade
+Média
 
-### Steps to reproduce
-1. Access the login page
-2. Click on "Esqueceu sua senha?"
+### Passos para reproduzir
+1. Acessar a tela de login
+2. Clicar em "Esqueceu sua senha?"
 
-### Expected Result
-The system should redirect the user to the password recovery flow.
+### Resultado Esperado
+O sistema deve redirecionar o usuário para o fluxo de recuperação de senha.
 
-### Actual Result
-The click action does not trigger any redirection or recovery flow.
-The user remains on the login page.
+### Resultado Obtido
+O clique não realiza nenhum redirecionamento ou ação.
+O usuário permanece na tela de login.
 
 ---
 
-## BUG 2 - Authentication warning displayed for valid credentials
+## BUG 2 - Mensagem de autenticação incorreta com credenciais válidas
 
-### Severity
-High
+### Severidade
+Alta
 
-### Priority
-High
+### Prioridade
+Alta
 
-### Steps to reproduce
-1. Access the login page
-2. Enter valid credentials:
+### Passos para reproduzir
+1. Acessar a tela de login
+2. Informar credenciais válidas:
    - Email: qa@test.com
-   - Password: 123456
-3. Click on "Entrar"
+   - Senha: 123456
+3. Clicar em "Entrar"
 
-### Expected Result
-The system should authenticate the user normally without displaying any authentication error.
+### Resultado Esperado
+O sistema deve autenticar o usuário normalmente sem apresentar mensagens de erro.
 
-### Actual Result
-The system displays the message:
+### Resultado Obtido
+O sistema apresenta a mensagem:
 "Seu login está incorreto, quer continuar?"
-even when valid credentials are provided.
+mesmo utilizando credenciais válidas.
 
-After clicking "Continuar", the user is authenticated successfully.
-
----
-
-## BUG 3 - Archive button deletes database instead of archiving
-
-### Severity
-Critical
-
-### Priority
-High
-
-### Steps to reproduce
-1. Login into the system
-2. Create a new database
-3. Click on "Arquivar"
-
-### Expected Result
-The database should be moved to archived items.
-
-### Actual Result
-The database is permanently deleted instead of being archived.
+Após clicar em "Continuar", o usuário é autenticado normalmente.
 
 ---
 
-## BUG 4 - Archived items flow inconsistency
+## BUG 3 - Botão arquivar exclui o banco de dados
 
-### Severity
-High
+### Severidade
+Crítica
 
-### Priority
-Medium
+### Prioridade
+Alta
 
-### Steps to reproduce
-1. Access the archived items section
-2. Try to archive a database
+### Passos para reproduzir
+1. Realizar login no sistema
+2. Criar um novo banco de dados
+3. Clicar no botão "Arquivar"
 
-### Expected Result
-Archived databases should be listed correctly in the archived items section.
+### Resultado Esperado
+O banco de dados deve ser movido para a área de itens arquivados.
 
-### Actual Result
-No database can be archived because the archive action deletes the database permanently.
+### Resultado Obtido
+O banco de dados é excluído permanentemente ao invés de ser arquivado.
+
+---
+
+## BUG 4 - Inconsistência na funcionalidade de itens arquivados
+
+### Severidade
+Alta
+
+### Prioridade
+Média
+
+### Passos para reproduzir
+1. Acessar a área de itens arquivados
+2. Tentar arquivar um banco de dados
+
+### Resultado Esperado
+Os bancos arquivados devem ser exibidos corretamente na área de itens arquivados.
+
+### Resultado Obtido
+Nenhum banco pode ser arquivado, pois a ação de arquivar remove permanentemente o registro.
